@@ -2,19 +2,19 @@ function lines (){
     let sizeWidth = Math.random() * 22;
     let duration = Math.random() * 3;
 
-    let e = document.createElement('div');
+    let e = document.createElement("div");
     e.setAttribute("class","circle");
     document.body.appendChild(e);
 
     e.style.width = 12 + sizeWidth + "px";
-    e.style.left  = Math.random()* + innerWidth + "px";
-    e.style.animation = 2 + duration + "s";
+    e.style.left  = Math.random() * + innerWidth + "px";
+    e.style.animationDuration = 2 + duration + "s";
 
-    setTimeout(()=>{
+    setTimeout(function(){
         document.body.removeChild(e);
     }, 5000)
 }
 
-setInterval(() => {
+setInterval(function(){
     lines();
 }, 200);
